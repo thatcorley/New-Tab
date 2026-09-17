@@ -44,17 +44,33 @@
 
             <div id="widgets">
                 <div id="shortcuts" class="widget">
-                    <h2>Widget 1</h2>
+                    <div style="position: relative; display: flex; justify-content: center; align-items: center;">
+                        <h2 >Shortcuts</h2>
+                        <div style="position: absolute; right: 0; display: flex; gap: 0.5rem; margin-right: 1rem;">
+                            <p style="text-align: center;" id="bin-shortcut">🗑️</p>
+                            <p style="text-align: center;" id="add-shortcut">➕</p>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div id="shortcuts-grid"></div>
                 </div>
-                <div id="shortcuts" class="widget">
+
+                <div id="" class="widget">
                     <h2>Widget 2</h2>
+                    <hr>
                 </div>
-                <div id="shortcuts" class="widget">
+
+                <div id="" class="widget">
                     <h2>Widget 3</h2>
+                    <hr>
                 </div>
             </div>
         </div>
 
+        <footer>By ThatCorley</footer>
+
         <script src="scripts/main.js"></script>
+        <script type="module" src="scripts/shortcuts.js"></script>
     </body>
 </html>

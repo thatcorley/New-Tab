@@ -4,10 +4,10 @@ const saveManager = {
     get(key, fallback = null) {
         try {
             const rawData = localStorage.getItem(STORAGE_PREFIX+key);
-            if (raw == null) return fallback;
-            return JSON.parse(raw);
+            if (rawData == null) return fallback;
+            return JSON.parse(rawData);
         } catch(e) {
-            console.warn('saveManager failed to read "${key}"', e);
+            console.warn(`saveManager failed to read "${STORAGE_PREFIX+key}"`, e);
             return fallback;
         }
     },
@@ -17,7 +17,7 @@ const saveManager = {
             localStorage.setItem(STORAGE_PREFIX+key, JSON.stringify(value));
             return true;
         } catch(e) {
-            console.warn('saveManager failed to set "${key}"', e)
+            console.warn(`saveManager failed to set "${STORAGE_PREFIX+key}"`, e)
             return false;
         }
     },

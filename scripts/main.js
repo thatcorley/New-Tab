@@ -1,4 +1,4 @@
-setInterval(function () {
+function setDate() {
     var date = new Date()
     var currentTime = date.getHours().toString().padStart(2, "0") + ":" + date.getMinutes().toString().padStart(2, "0") + ":" + date.getSeconds().toString().padStart(2, "0");
     document.getElementById("time").innerHTML = currentTime;
@@ -9,6 +9,10 @@ setInterval(function () {
     //         year: 'numeric'
     //     });
     //document.getElementById("date").innerHTML = currentDate;
+}
+
+setInterval(function () {
+    setDate();
     }, 1000);
 
 const searchInput = document.getElementById("search-bar-input");
@@ -28,3 +32,5 @@ searchInput.addEventListener("keydown", (event) => {
         searchGoogle();
     }
 })
+
+setDate();
