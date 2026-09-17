@@ -12,3 +12,5 @@ notepad.addEventListener("input", () => {
         saveManager.set("notepad", notepad.value);
     }, 1000);
 });
+
+notepad.innerHTML = saveManager.get("notepad")
