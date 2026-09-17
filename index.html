@@ -56,14 +56,21 @@
                     <div id="shortcuts-grid"></div>
                 </div>
 
-                <div id="" class="widget">
-                    <h2>Widget 2</h2>
-                    <hr>
+                <div id="quick-notes" class="widget">
+                    <div>
+                        <h2>Quick Notes</h2>
+                        <hr>
+                    </div>
+                    <textarea name="quick-notes" id="quick-notes-text"></textarea>
                 </div>
 
-                <div id="" class="widget">
-                    <h2>Widget 3</h2>
+                <div id="password-gen" class="widget">
+                    <h2>Super Duper Secure Password</h2>
                     <hr>
+                    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                        <h1 id="genned_pass">PASSWORD</h1>
+                        <h3 style="border: white solid 5px; border-radius: 10px; width: 10rem;" id="gen_pass">GENERATE</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,5 +79,7 @@
 
         <script src="scripts/main.js"></script>
         <script type="module" src="scripts/shortcuts.js"></script>
+        <script type="module" src="scripts/notes.js"></script>
+        <script src="scripts/password.js"></script>
     </body>
 </html>
